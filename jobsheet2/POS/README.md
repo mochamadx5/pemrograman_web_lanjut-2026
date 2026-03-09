@@ -10,4 +10,5 @@
 ![Instalasi Laravel](img/blade2.png)
 ![Instalasi Laravel](img/blade3.png)
 ![Instalasi Laravel](img/blade4.png)
+- tampilan halaman
 ![Instalasi Laravel](img/web_view.png)
