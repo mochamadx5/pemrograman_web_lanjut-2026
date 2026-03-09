@@ -4,3 +4,9 @@
 ![Instalasi Laravel](img/controller_product.png)
 ![Instalasi Laravel](img/controller_sales.png)
 ![Instalasi Laravel](img/controller_user.png)
+
+- Membuat tampilan blade
+![Instalasi Laravel](img/blade1.png)
+![Instalasi Laravel](img/blade2.png)
+![Instalasi Laravel](img/blade3.png)
+![Instalasi Laravel](img/blade4.png)
