@@ -10,3 +10,4 @@
 ![Instalasi Laravel](img/blade2.png)
 ![Instalasi Laravel](img/blade3.png)
 ![Instalasi Laravel](img/blade4.png)
+![Instalasi Laravel](img/web_view.png)
