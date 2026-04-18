@@ -27,6 +27,8 @@
 ![kategori](img/4.png)
 3.  [cite_start]**Tabel `m_supplier`**: Menyimpan data pemasok barang[cite: 307].
 ![supplier](img/5.png)
+tampilan database
+![supplier](img/6.png)
 
 ### Praktikum 2.2 - Pembuatan File Migrasi Dengan Relasi
 [cite_start]Pembuatan tabel yang memiliki ketergantungan data (*Foreign Key*)[cite: 309].
