@@ -11,7 +11,8 @@
 ---
 
 ## Praktikum 1 - Pengaturan Database
-[cite_start]Pada tahap ini, dilakukan pembuatan database bernama `pwl_pos` melalui phpMyAdmin/HeidiSQL dan melakukan konfigurasi pada file `.env` di Laravel agar terkoneksi dengan database tersebut[cite: 23, 61].
+![File env](img/1.png)
+![Database file](img/2.png)
 
 ### Hasil Pengamatan
 * Konfigurasi database pada file `.env` telah disesuaikan dengan pengaturan MySQL lokal.
