@@ -16,13 +16,9 @@
 ![Database file](img/2.png)
 
 ### Hasil Pengamatan
-* Konfigurasi database pada file `.env` telah disesuaikan dengan pengaturan MySQL lokal.
-* [cite_start]`APP_KEY` telah di-generate menggunakan perintah `php artisan key:generate`[cite: 41, 548].
-
----
 
 ## Praktikum 2 - Migration
-[cite_start]Migration digunakan untuk mengelola struktur tabel database melalui kode program secara efisien[cite: 91].
+![migrate set up](img/3.png)
 
 ### Praktikum 2.1 - Pembuatan File Migrasi Tanpa Relasi
 [cite_start]Pembuatan tabel utama yang tidak memiliki *Foreign Key* terlebih dahulu[cite: 159].
