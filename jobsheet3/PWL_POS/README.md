@@ -11,6 +11,7 @@
 ---
 
 ## Praktikum 1 - Pengaturan Database
+**Set up database**
 ![File env](img/1.png)
 ![Database file](img/2.png)
 
