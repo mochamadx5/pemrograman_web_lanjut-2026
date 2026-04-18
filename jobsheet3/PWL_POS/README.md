@@ -24,7 +24,9 @@
 1.  [cite_start]**Tabel `m_level`**: Menyimpan data level pengguna[cite: 247].
 ![migrate set up](img/3.png)
 2.  [cite_start]**Tabel `m_kategori`**: Menyimpan kategori produk[cite: 307].
+![migrate set up](img/4.png)
 3.  [cite_start]**Tabel `m_supplier`**: Menyimpan data pemasok barang[cite: 307].
+![migrate set up](img/5.png)
 
 ### Praktikum 2.2 - Pembuatan File Migrasi Dengan Relasi
 [cite_start]Pembuatan tabel yang memiliki ketergantungan data (*Foreign Key*)[cite: 309].
