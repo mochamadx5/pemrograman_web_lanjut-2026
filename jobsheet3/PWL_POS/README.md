@@ -15,9 +15,9 @@
 ![File env](img/1.png)
 ![Database file](img/2.png)
 
-### Hasil Pengamatan
 
 ## Praktikum 2 - Migration
+**Migration**
 ![migrate set up](img/3.png)
 
 ### Praktikum 2.1 - Pembuatan File Migrasi Tanpa Relasi
