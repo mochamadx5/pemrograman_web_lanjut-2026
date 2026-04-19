@@ -17,9 +17,15 @@
 ## Praktikum 2 - RSM:
 - Find
 ![View](img/2.png)
+
 - FirstWhere
 ![View](img/2.png)
+
 - findOr()
 404 NOT FOUND
-- findOr()
 
+- findOrFail(1)
+![View](img/2.png)
+
+- findOrFail(20)
+404 NOT FOUND
