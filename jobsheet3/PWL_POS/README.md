@@ -31,10 +31,8 @@ tampilan database
 ![supplier](img/6.png)
 
 ### Praktikum 2.2 - Pembuatan File Migrasi Dengan Relasi
-[cite_start]Pembuatan tabel yang memiliki ketergantungan data (*Foreign Key*)[cite: 309].
-1.  [cite_start]**Tabel `m_user`**: Berelasi dengan `m_level` melalui `level_id`[cite: 311].
-2.  [cite_start]**Tabel `m_barang`**: Berelasi dengan `m_kategori` dan `m_supplier`[cite: 321].
-3.  [cite_start]**Tabel `t_stok`**, **`t_penjualan`**, dan **`t_penjualan_detail`**[cite: 321].
+Hasil Tabel (heidiSQL), relasi sudah ada
+![database dengan relasi](img/7.png)
 
 **Screenshot Hasil Migration di HeidiSQL/phpMyAdmin:**
 > ![Screenshot Migration](link_gambar_kamu_disini)
