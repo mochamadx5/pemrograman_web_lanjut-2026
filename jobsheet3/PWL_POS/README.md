@@ -76,19 +76,19 @@ Implementasi *raw query* menggunakan fitur DB Façade untuk operasi CRUD[cite: 3
 
 
 ### Hasil Pengamatan (KategoriController)
-* Menggunakan `DB::table('m_kategori')->insert()` untuk menambah data[cite: 451, 470].
-* [cite_start]Menggunakan method `where()` dan `update()` untuk mengubah data[cite: 454, 478].
-* [cite_start]Menampilkan data ke view melalui objek yang lebih terstruktur dibanding raw query[cite: 465, 489].
+* Menggunakan `DB::table('m_kategori')->insert()` untuk menambah data.
+* Menggunakan method `where()` dan `update()` untuk mengubah data.
+* Menampilkan data ke view melalui objek yang lebih terstruktur dibanding raw query.
 
 ---
 
 ## Praktikum 6 - Eloquent ORM
-[cite_start]Implementasi teknik pemetaan tabel ke dalam bentuk objek (Model)[cite: 501, 502].
+![view](img/21.png)
 
 ### Hasil Pengamatan (UserController)
-* [cite_start]Dibuat file `UserModel.php` untuk merepresentasikan tabel `m_user`[cite: 512, 517].
-* [cite_start]Pengambilan data dilakukan dengan memanggil `UserModel::all()` yang mengembalikan seluruh data dalam bentuk koleksi objek[cite: 523, 537].
-* Operasi database menjadi lebih intuitif karena setiap baris tabel dianggap sebagai properti dari sebuah objek[cite: 501].
+* Dibuat file `UserModel.php` untuk merepresentasikan tabel `m_user`.
+* Pengambilan data dilakukan dengan memanggil `UserModel::all()` yang mengembalikan seluruh data dalam bentuk koleksi objek.
+* Operasi database menjadi lebih intuitif karena setiap baris tabel dianggap sebagai properti dari sebuah objek.
 
 ---
 
