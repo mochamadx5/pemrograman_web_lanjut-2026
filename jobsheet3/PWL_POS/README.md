@@ -67,7 +67,13 @@ Implementasi *raw query* menggunakan fitur DB Façade untuk operasi CRUD[cite: 3
 ---
 
 ## Praktikum 5 - Query Builder
-[cite_start]Implementasi operasi database menggunakan method-method yang disediakan oleh Laravel tanpa menulis SQL murni[cite: 439, 440].
+* **Update dan Hapus**
+![update](img/19.png)
+![delete](img/17.png)
+
+* **Menampilkan Data (view)**
+![view](img/18.png)
+
 
 ### Hasil Pengamatan (KategoriController)
 * Menggunakan `DB::table('m_kategori')->insert()` untuk menambah data[cite: 451, 470].
