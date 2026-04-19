@@ -13,3 +13,13 @@
 ## Praktikum 1 - $fillable:
 **Menampilkan Data**
 ![View](img/1.png)
+
+## Praktikum 2 - RSM:
+- Find
+![View](img/2.png)
+- FirstWhere
+![View](img/2.png)
+- findOr()
+404 NOT FOUND
+- findOr()
+
