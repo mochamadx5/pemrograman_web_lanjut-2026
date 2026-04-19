@@ -87,7 +87,7 @@ Implementasi *raw query* menggunakan fitur DB Façade untuk operasi CRUD[cite: 3
 ---
 
 ## Jawaban Pertanyaan (Penutup)
-1.  **Fungsi `APP_KEY`**: Digunakan untuk enkripsi data (seperti session dan cookie) agar data aplikasi tetap aman[cite: 547].
+1.  **Fungsi `APP_KEY`**: digunakan untuk enkripsi data (seperti session dan cookie) agar data aplikasi tetap aman[cite: 547].
 2. **Generate `APP_KEY`**: Menggunakan perintah `php artisan key:generate`[cite: 548].
 3. **Default Migration**: Terdapat 3 file bawaan (users, password_reset_tokens, failed_jobs)[cite: 549, 550].
 4. **Tujuan `timestamps()`**: Otomatis membuat kolom `created_at` dan `updated_at` untuk mencatat waktu manipulasi data[cite: 551].
