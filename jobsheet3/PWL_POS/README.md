@@ -57,10 +57,12 @@ Data seeder untuk table m_kategori, m_supplier, m_barang, t_stok, t_penjualan, t
 Implementasi *raw query* menggunakan fitur DB Façade untuk operasi CRUD[cite: 376, 377].
 
 ### Hasil Pengamatan (LevelController)
-* [cite_start]**Insert**: Menambahkan data level baru menggunakan `DB::insert()`[cite: 389, 406].
-* [cite_start]**Update**: Mengubah data yang sudah ada menggunakan `DB::update()`[cite: 390, 416].
-* **Delete**: Menghapus data menggunakan `DB::delete()`[cite: 397, 419].
-* [cite_start]**Select**: Menampilkan data ke View menggunakan `DB::select()`[cite: 385, 424].
+* **Update dan Hapus**
+![update](img/16.png)
+![delete](img/17.png)
+
+* **Menampilkan Data (view)**
+![view](img/18.png)
 
 ---
 
@@ -86,14 +88,14 @@ Implementasi *raw query* menggunakan fitur DB Façade untuk operasi CRUD[cite: 3
 
 ## Jawaban Pertanyaan (Penutup)
 1.  **Fungsi `APP_KEY`**: Digunakan untuk enkripsi data (seperti session dan cookie) agar data aplikasi tetap aman[cite: 547].
-2.  [cite_start]**Generate `APP_KEY`**: Menggunakan perintah `php artisan key:generate`[cite: 548].
-3.  [cite_start]**Default Migration**: Terdapat 3 file bawaan (users, password_reset_tokens, failed_jobs)[cite: 549, 550].
-4.  [cite_start]**Tujuan `timestamps()`**: Otomatis membuat kolom `created_at` dan `updated_at` untuk mencatat waktu manipulasi data[cite: 551].
-5.  [cite_start]**Tipe data `id()`**: Menghasilkan tipe data *Big Integer Unsigned Auto Increment*[cite: 552].
-6.  [cite_start]**Perbedaan `id()` vs `id('level_id')`**: `id()` membuat nama kolom default `id`, sedangkan `id('level_id')` secara eksplisit memberi nama kolom tersebut `level_id`[cite: 553].
-7.  [cite_start]**Fungsi `unique()`**: Memastikan data pada kolom tersebut tidak ada yang kembar/duplikat[cite: 554].
-8.  [cite_start]**UnsignedBigInteger vs ID**: Kolom relasi harus menggunakan `unsignedBigInteger` agar tipe datanya sama persis dengan kolom `id` di tabel induk agar relasi bisa terbentuk[cite: 555].
-9.  [cite_start]**Tujuan Class Hash**: Untuk melakukan *hashing* (enkripsi satu arah) pada password pengguna agar tidak bisa dibaca dalam bentuk teks biasa[cite: 556].
-10. [cite_start]**Tanda Tanya (?) pada Query**: Sebagai *placeholder* (parameter binding) untuk mencegah serangan SQL Injection[cite: 557].
-11. [cite_start]**Protected `$table` dan `$primaryKey`**: Memberitahu Laravel bahwa model ini secara manual merujuk pada tabel `m_user` dan menggunakan `user_id` sebagai kunci utamanya, bukan nama default Laravel[cite: 558].
-12. [cite_start]**Metode Termudah**: Eloquent ORM sering dianggap paling mudah karena sintaksnya sangat mendekati bahasa manusia dan integrasi objeknya sangat kuat di Laravel[cite: 560].
+2. **Generate `APP_KEY`**: Menggunakan perintah `php artisan key:generate`[cite: 548].
+3. **Default Migration**: Terdapat 3 file bawaan (users, password_reset_tokens, failed_jobs)[cite: 549, 550].
+4. **Tujuan `timestamps()`**: Otomatis membuat kolom `created_at` dan `updated_at` untuk mencatat waktu manipulasi data[cite: 551].
+5.  **Tipe data `id()`**: Menghasilkan tipe data *Big Integer Unsigned Auto Increment*[cite: 552].
+6.  **Perbedaan `id()` vs `id('level_id')`**: `id()` membuat nama kolom default `id`, sedangkan `id('level_id')` secara eksplisit memberi nama kolom tersebut `level_id`[cite: 553].
+7.  **Fungsi `unique()`**: Memastikan data pada kolom tersebut tidak ada yang kembar/duplikat[cite: 554].
+8.  **UnsignedBigInteger vs ID**: Kolom relasi harus menggunakan `unsignedBigInteger` agar tipe datanya sama persis dengan kolom `id` di tabel induk agar relasi bisa terbentuk[cite: 555].
+9.  **Tujuan Class Hash**: Untuk melakukan *hashing* (enkripsi satu arah) pada password pengguna agar tidak bisa dibaca dalam bentuk teks biasa[cite: 556].
+10. **Tanda Tanya (?) pada Query**: Sebagai *placeholder* (parameter binding) untuk mencegah serangan SQL Injection[cite: 557].
+11. **Protected `$table` dan `$primaryKey`**: Memberitahu Laravel bahwa model ini secara manual merujuk pada tabel `m_user` dan menggunakan `user_id` sebagai kunci utamanya, bukan nama default Laravel[cite: 558].
+12. **Metode Termudah**: Eloquent ORM sering dianggap paling mudah karena sintaksnya sangat mendekati bahasa manusia dan integrasi objeknya sangat kuat di Laravel[cite: 560].
