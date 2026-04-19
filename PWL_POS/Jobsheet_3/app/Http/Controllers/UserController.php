@@ -8,18 +8,19 @@ use Illuminate\Support\Facades\Hash;
 
 class UserController extends Controller
 {
-    public function index(){
-    $data = [
-        'level_id' => 2,
-        'username' => 'manager_dua',
-        'nama' => 'Manager 2',
-        'password' => Hash::make('12345')
-    ];
+   public function index()
+    {
+        // Matikan kode ini agar tidak terus-terusan menambah data yang sama
+        // $data = [
+        //     'level_id' => 2,
+        //     'username' => 'manager_dua',
+        //     'nama' => 'Manager 2',
+        //     'password' => Hash::make('12345')
+        // ];
+        // UserModel::create($data);
 
-    // Menggunakan mass assignment untuk menyimpan data [cite: 58]
-    UserModel::create($data);
-
-    $user = UserModel::all();
-    return view('user', ['data' => $user]);
-}
+        // Coba ambil semua data user
+        $user = UserModel::all();
+        return view('user', ['data' => $user]);
+    }
 }
