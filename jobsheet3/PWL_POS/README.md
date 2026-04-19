@@ -39,7 +39,17 @@ Seluruh tabel hasil migrasi (heidiSQL), relasi sudah ada
 
 ### Hasil Pengamatan
 * [cite_start]Berhasil memasukkan data awal ke tabel `m_level` dan `m_user` melalui perintah `php artisan db:seed`[cite: 336, 353].
-* Data password telah dienkripsi menggunakan `Hash::make()` demi keamanan[cite: 556].
+Seeder untuk tabel m_level
+![database dengan relasi](img/8.png)
+Seeder untuk tabel m_user
+![database dengan relasi](img/9.png)
+Data seeder untuk table m_kategori, m_supplier, m_barang, t_stok, t_penjualan, t_penjualan_detail
+![database dengan relasi](img/10.png)
+![database dengan relasi](img/11.png)
+![database dengan relasi](img/12.png)
+![database dengan relasi](img/13.png)
+![database dengan relasi](img/14.png)
+![database dengan relasi](img/15.png)
 
 ---
 
