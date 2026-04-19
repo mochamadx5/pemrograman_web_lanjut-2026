@@ -31,13 +31,8 @@ tampilan database
 ![supplier](img/6.png)
 
 ### Praktikum 2.2 - Pembuatan File Migrasi Dengan Relasi
-Hasil Tabel (heidiSQL), relasi sudah ada
+Seluruh tabel hasil migrasi (heidiSQL), relasi sudah ada
 ![database dengan relasi](img/7.png)
-
-**Screenshot Hasil Migration di HeidiSQL/phpMyAdmin:**
-> ![Screenshot Migration](link_gambar_kamu_disini)
-
----
 
 ## Praktikum 3 - Seeder
 [cite_start]Seeder digunakan untuk mengisi database dengan data awal atau data *dummy* agar aplikasi siap digunakan untuk pengujian[cite: 331, 332].
