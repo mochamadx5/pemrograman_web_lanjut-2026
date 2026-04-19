@@ -69,10 +69,10 @@ Implementasi *raw query* menggunakan fitur DB Façade untuk operasi CRUD[cite: 3
 ## Praktikum 5 - Query Builder
 * **Update dan Hapus**
 ![update](img/19.png)
-![delete](img/17.png)
+![delete](img/20.png)
 
 * **Menampilkan Data (view)**
-![view](img/18.png)
+![view](img/20.png)
 
 
 ### Hasil Pengamatan (KategoriController)
