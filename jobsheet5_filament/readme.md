@@ -7,11 +7,11 @@ Dokumen ini menjelaskan proses instalasi Filament pada Laravel, mulai dari konfi
 
 ## 1. Instalasi Filament
 
-### 1.1 Instalasi Package Filament
+### Instalasi Package Filament
 ![Homepage Laravel](img/1.png)
 
-### 6.2 Login Filament Admin
+### Login Filament Admin
 ![Login Filament Admin](img/2.png)
 
-### 6.3 Dashboard Admin Filament
+### Dashboard Admin Filament
 ![Dashboard Admin Filament](img/3.png)
