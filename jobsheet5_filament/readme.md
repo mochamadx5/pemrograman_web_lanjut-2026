@@ -33,6 +33,6 @@ Dokumen ini menjelaskan proses instalasi Filament pada Laravel, mulai dari konfi
 
 ## 1. Mengkonfigurasi method post
 
-### Instalasi Package Filament
+### menampilkan halaman post
 ![Tampilan post](img/8.png)
 ![Tampilan post](img/9.png)
