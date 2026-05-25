@@ -20,5 +20,6 @@ Dokumen ini menjelaskan proses instalasi Filament pada Laravel, mulai dari konfi
 ![Dashboard Filament](img/4.png)
 
 ## 2. CRUD jobsheet 2
-### Tampilan user
-![](img/5.png)
+### Tampilan user dan table
+![user dan table](img/5.png)
+![user dan table](img/6.png)
