@@ -13,5 +13,8 @@ Dokumen ini menjelaskan proses instalasi Filament pada Laravel, mulai dari konfi
 ### Login Filament Admin
 ![Login Filament Admin](img/2.png)
 
-### Dashboard Admin Filament
+### Dashboard Login Filament
 ![Dashboard Admin Filament](img/3.png)
+
+### Dashboard berhasil login Filament
+![Dashboard Filament](img/4.png)
