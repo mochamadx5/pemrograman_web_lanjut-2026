@@ -5,7 +5,7 @@ Dokumen ini menjelaskan proses instalasi Filament pada Laravel, mulai dari konfi
 
 ---
 
-## 1. Instalasi Filament
+## 1. Instalasi Filament jobsheet 1
 
 ### Instalasi Package Filament
 ![Homepage Laravel](img/1.png)
@@ -23,3 +23,6 @@ Dokumen ini menjelaskan proses instalasi Filament pada Laravel, mulai dari konfi
 ### Tampilan user dan table
 ![user dan table](img/5.png)
 ![user dan table](img/6.png)
+
+## 3. Migrasi dan Model jobsheet 3
+![kategori](img/7.png)
