@@ -29,7 +29,7 @@ Dokumen ini menjelaskan proses instalasi Filament pada Laravel, mulai dari konfi
 
 
 
-# Laporan Instalasi dan Konfigurasi Filament Pertemuan 5
+# Laporan Instalasi dan Konfigurasi Filament Pertemuan 6
 
 ## 1. Mengkonfigurasi method post
 
