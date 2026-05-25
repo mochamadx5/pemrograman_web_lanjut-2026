@@ -26,13 +26,3 @@ Dokumen ini menjelaskan proses instalasi Filament pada Laravel, mulai dari konfi
 
 ## 3. Migrasi dan Model jobsheet 3
 ![kategori](img/7.png)
-
-
-
-# Laporan Instalasi dan Konfigurasi Filament Pertemuan 6
-
-## 1. Mengkonfigurasi method post
-
-### menampilkan halaman post
-![Tampilan post](img/8.png)
-![Tampilan post](img/9.png)
