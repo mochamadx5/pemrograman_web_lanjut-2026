@@ -1,4 +1,4 @@
-# Laporan Instalasi dan Konfigurasi Filament di Laravel
+# Laporan Instalasi dan Konfigurasi Filament Pertemuan 5
 
 ## Deskripsi
 Dokumen ini menjelaskan proses instalasi Filament pada Laravel, mulai dari konfigurasi PHP, Composer, hingga berhasil menjalankan panel admin dengan database MySQL melalui LARAGON.
@@ -26,3 +26,13 @@ Dokumen ini menjelaskan proses instalasi Filament pada Laravel, mulai dari konfi
 
 ## 3. Migrasi dan Model jobsheet 3
 ![kategori](img/7.png)
+
+
+
+# Laporan Instalasi dan Konfigurasi Filament Pertemuan 5
+
+## 1. Mengkonfigurasi method post
+
+### Instalasi Package Filament
+![Tampilan post](img/8.png)
+![Tampilan post](img/9.png)
