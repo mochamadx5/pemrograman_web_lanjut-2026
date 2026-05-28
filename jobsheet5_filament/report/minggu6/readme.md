@@ -10,6 +10,7 @@ Dokumen ini menjelaskan proses konfigurasi method Post pada Filament, termasuk p
 ### menampilkan halaman post
 ![Tampilan post](img/8.png)
 ![Tampilan post](img/9.png)
+![Tampilan post](img/10.png)
 
 
 1. **Membuat Migration untuk Post**
