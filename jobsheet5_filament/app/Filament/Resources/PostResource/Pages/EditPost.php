@@ -16,4 +16,10 @@ class EditPost extends EditRecord
             Actions\DeleteAction::make(),
         ];
     }
+
+    // Tambahkan blok kode ini
+    protected function getRedirectUrl(): string
+    {
+        return $this->getResource()::getUrl('index');
+    }
 }
