@@ -10,8 +10,7 @@ use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 
-class PostsRelationManager extends RelationManager
-{
+class PostsRelationManager extends RelationManager {
     protected static string $relationship = 'posts';
 
     public function form(Form $form): Form
@@ -19,6 +18,9 @@ class PostsRelationManager extends RelationManager
         return $form
             ->schema([
                 Forms\Components\TextInput::make('title')
+                    ->required()
+                    ->maxLength(255),
+                Forms\Components\TextInput::make('slug')
                     ->required()
                     ->maxLength(255),
             ]);
@@ -30,6 +32,8 @@ class PostsRelationManager extends RelationManager
             ->recordTitleAttribute('title')
             ->columns([
                 Tables\Columns\TextColumn::make('title'),
+                Tables\Columns\TextColumn::make('slug'),
+                Tables\Columns\TextColumn::make('created_at')->dateTime(),
             ])
             ->filters([
                 //
