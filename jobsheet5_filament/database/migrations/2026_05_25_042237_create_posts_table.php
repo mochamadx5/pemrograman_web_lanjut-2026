@@ -11,7 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        // 1. Tabel Posts (Kolom JSON tags sudah dihapus)
+        // 1. Tabel Posts
         Schema::create('posts', function (Blueprint $table) {
             $table->id();
             $table->string('title');
