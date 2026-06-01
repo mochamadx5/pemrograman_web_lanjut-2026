@@ -184,8 +184,8 @@ class PostResource extends Resource
                 Action::make('status')
                     ->label('Status Change')
                     ->icon('heroicon-o-check-circle')
-                    ->requiresConfirmation() // Latihan Praktikum: Menambahkan konfirmasi
-                    ->schema([
+                    ->requiresConfirmation() 
+                    ->form([ // <-- INI YANG DIUBAH (dari schema menjadi form)
                         Checkbox::make('published')
                             ->default(fn ($record): bool => (bool) $record->published),
                     ])
