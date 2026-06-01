@@ -22,7 +22,11 @@ use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 
-
+use Filament\Infolists\Infolist;
+use Filament\Infolists\Components\Section as InfolistSection;
+use Filament\Infolists\Components\TextEntry;
+use Filament\Infolists\Components\ImageEntry;
+use Filament\Infolists\Components\IconEntry;
 
 class ProductResource extends Resource
 {
@@ -101,6 +105,64 @@ class ProductResource extends Resource
                 Tables\Actions\BulkActionGroup::make([
                     Tables\Actions\DeleteBulkAction::make(),
                 ]),
+            ]);
+    }
+
+    public static function infolist(Infolist $infolist): Infolist
+    {
+        return $infolist
+            ->schema([
+                // Section 1: Product Info
+                InfolistSection::make('Product Info')
+                    ->schema([
+                        TextEntry::make('name')
+                            ->label('Product Name')
+                            ->weight('bold')
+                            ->color('primary'),
+                        TextEntry::make('id')
+                            ->label('Product ID'),
+                        TextEntry::make('sku')
+                            ->label('Product SKU')
+                            ->badge()
+                            ->color('success'), // Tugas Praktikum: Badge warna beda
+                        TextEntry::make('description')
+                            ->label('Product Description')
+                            ->columnSpanFull(),
+                        TextEntry::make('created_at')
+                            ->label('Product Creation Date')
+                            ->date('d M Y')
+                            ->color('info'),
+                    ])->columns(2),
+
+                // Section 2: Pricing & Stock
+                InfolistSection::make('Product Price and Stock')
+                    ->schema([
+                        TextEntry::make('price')
+                            ->label('Product Price')
+                            ->weight('bold')
+                            ->color('primary')
+                            ->icon('heroicon-o-currency-dollar')
+                            ->formatStateUsing(fn ($state) => 'Rp ' . number_format($state, 0, ',', '.')), // Tugas Praktikum: Format Rp
+                        TextEntry::make('stock')
+                            ->label('Product Stock')
+                            ->weight('bold')
+                            ->color('primary')
+                            ->icon('heroicon-o-archive-box'), // Tugas Praktikum: Tambah icon pada stock
+                    ])->columns(2),
+
+                // Section 3: Image and Status
+                InfolistSection::make('Image and Status')
+                    ->schema([
+                        ImageEntry::make('image')
+                            ->label('Product Image')
+                            ->disk('public'),
+                        IconEntry::make('is_active')
+                            ->label('Is Active?')
+                            ->boolean(),
+                        IconEntry::make('is_featured')
+                            ->label('Is Featured?')
+                            ->boolean(),
+                    ])->columns(3),
             ]);
     }
 
