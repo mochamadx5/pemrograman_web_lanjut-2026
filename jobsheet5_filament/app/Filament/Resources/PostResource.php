@@ -65,14 +65,10 @@ class PostResource extends Resource
                                 ->validationMessages([
                                     'unique' => 'Slug ini sudah dipakai, coba variasi lain.', // Custom Message
                                 ]),
-                            Select::make('category_id')
+                            Forms\Components\Select::make('category_id')
                                 ->relationship('category', 'name')
-                                ->preload()
                                 ->searchable()
-                                ->required() // Tugas Praktikum 6: Wajib pilih kategori
-                                ->validationMessages([
-                                    'required' => 'Kategori wajib dipilih ya!', // Custom Message
-                                ]),
+                                ->required(),
                             ColorPicker::make('color'),
                             MarkdownEditor::make('body')
                                 ->columnSpanFull(),
