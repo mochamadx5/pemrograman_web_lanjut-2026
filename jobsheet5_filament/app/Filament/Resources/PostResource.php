@@ -2,6 +2,10 @@
 
 namespace App\Filament\Resources;
 
+use App\Filament\Resources\PostResource\Pages;
+use App\Filament\Resources\PostResource\RelationManagers;
+use App\Models\Post;
+
 use Filament\Forms\Components\Group;
 use Filament\Forms\Components\Section;
 use Filament\Forms\Components\TextInput;
@@ -16,9 +20,6 @@ use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Columns\ColorColumn;
 use Filament\Tables\Columns\ImageColumn;
 use Filament\Tables\Columns\IconColumn;
-use App\Filament\Resources\PostResource\Pages;
-use App\Filament\Resources\PostResource\RelationManagers;
-use App\Models\Post;
 use Filament\Forms;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
@@ -26,6 +27,9 @@ use Filament\Tables;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
+use Filament\Tables\Filters\Filter;
+use Filament\Tables\Filters\SelectFilter;
+use Filament\Forms\Components\DatePicker;
 
 class PostResource extends Resource
 {
@@ -94,30 +98,48 @@ class PostResource extends Resource
         return $table
             ->columns([
                 TextColumn::make('title')
-                    ->searchable()
-                    ->sortable(), // Tugas Praktikum: Aktifkan sortable
+                    ->searchable() // Latihan Praktikum: Aktifkan search
+                    ->sortable(),
                 TextColumn::make('slug')
-                    ->searchable()
-                    ->sortable(), // Tugas Praktikum: Aktifkan sortable
-                TextColumn::make('category.name') 
-                    ->searchable()
-                    ->sortable(), // Tugas Praktikum: Aktifkan sortable pada relasi
+                    ->searchable() // Latihan Praktikum: Aktifkan search
+                    ->sortable(),
+                TextColumn::make('category.name')
+                    ->searchable() // Latihan Praktikum: Aktifkan search pada relasi
+                    ->sortable(),
                 ColorColumn::make('color'),
                 ImageColumn::make('image')
                     ->disk('public'),
-                IconColumn::make('published') 
+                IconColumn::make('published')
                     ->boolean(),
-                TextColumn::make('created_at') // Tambahan kolom untuk fitur sorting tanggal
+                TextColumn::make('created_at')
                     ->label('Created At')
                     ->dateTime()
                     ->sortable(),
             ])
-            ->defaultSort('created_at', 'desc') // Tugas Praktikum: Default sorting descending berdasarkan tanggal
+            ->defaultSort('created_at', 'desc')
             ->filters([
-                //
+                // Latihan Praktikum: Buat filter tanggal
+                Filter::make('created_at')
+                    ->label('Creation Date')
+                    ->schema([
+                        DatePicker::make('created_at')
+                            ->label('Select Date:'),
+                    ])
+                    ->query(function (Builder $query, array $data) {
+                        return $query->when(
+                            $data['created_at'],
+                            fn (Builder $query, $date) => $query->whereDate('created_at', $date)
+                        );
+                    }),
+                
+                // Latihan Praktikum: Buat filter kategori menggunakan SelectFilter
+                SelectFilter::make('category_id')
+                    ->label('Category')
+                    ->relationship('category', 'name')
+                    ->preload(),
             ])
             ->actions([
-                Tables\Actions\ViewAction::make(), 
+                Tables\Actions\ViewAction::make(),
                 Tables\Actions\EditAction::make(),
             ])
             ->bulkActions([
