@@ -35,3 +35,13 @@ Tahap ini mengubah tampilan halaman **View** produk yang sebelumnya berbentuk *f
 - Menampilkan List Product
 ![Product Info](img/13.png)
 ![Product Info](img/14.png)
+
+## 3. Pertemuan 9: Membuat tampilan dinamis
+
+- **Mengubah Section menjadi Tabs:** Mengelompokkan data ke dalam tiga *tab* utama yang bisa dinavigasikan melalui klik.
+- **Kustomisasi Tab:** Menambahkan ikon spesifik dan *badge* (indikator angka dinamis berdasarkan stok produk) pada masing-masing *tab* agar lebih interaktif.
+- **Mengatur Orientasi Tab:** Mengonversi tata letak *tab* dari orientasi *horizontal* menjadi *vertical*.
+
+### Dokumentasi Tampilan Tabs
+- Penerapan badge dinamis menjadi Tabs horizontal 
+![Tabs Horizontal](img/16.png)

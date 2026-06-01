@@ -114,7 +114,7 @@ class ProductResource extends Resource
         return $infolist
             ->schema([
                 Tabs::make('Product Tabs')
-                    // ->vertical() // <-- HAPUS TANDA '//' DI AWAL BARIS INI UNTUK MENGUBAH JADI VERTICAL
+                    // ->vertical()
                     ->tabs([
                         // Tab 1: Product Info
                         Tabs\Tab::make('Product Info')
