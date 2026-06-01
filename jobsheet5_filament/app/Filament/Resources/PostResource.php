@@ -86,7 +86,12 @@ class PostResource extends Resource
                         ]),
                     Section::make('Meta Information')
                         ->schema([
-                            TagsInput::make('tags'),
+                            // Input Tags Many-to-Many
+                            Forms\Components\Select::make('tags')
+                                ->relationship('tags', 'name')
+                                ->multiple()
+                                ->preload()
+                                ->searchable(),
                             Checkbox::make('published'),
                             DateTimePicker::make('published_at'),
                         ]),
