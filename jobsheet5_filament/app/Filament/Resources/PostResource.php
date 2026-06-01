@@ -97,24 +97,49 @@ class PostResource extends Resource
     {
         return $table
             ->columns([
+                // Latihan Praktikum: Tambahkan kolom ID dan sembunyikan secara default
+                TextColumn::make('id')
+                    ->label('ID')
+                    ->sortable()
+                    ->toggleable(isToggledHiddenByDefault: true),
+
                 TextColumn::make('title')
-                    ->searchable() // Latihan Praktikum: Aktifkan search
-                    ->sortable(),
+                    ->searchable()
+                    ->sortable()
+                    ->toggleable(), // Latihan Praktikum: Aktifkan toggle
+
                 TextColumn::make('slug')
-                    ->searchable() // Latihan Praktikum: Aktifkan search
-                    ->sortable(),
+                    ->searchable()
+                    ->sortable()
+                    ->toggleable(), // Latihan Praktikum: Aktifkan toggle
+
                 TextColumn::make('category.name')
-                    ->searchable() // Latihan Praktikum: Aktifkan search pada relasi
-                    ->sortable(),
-                ColorColumn::make('color'),
+                    ->searchable()
+                    ->sortable()
+                    ->toggleable(), // Latihan Praktikum: Aktifkan toggle
+
+                ColorColumn::make('color')
+                    ->toggleable(), // Latihan Praktikum: Aktifkan toggle
+
                 ImageColumn::make('image')
-                    ->disk('public'),
+                    ->disk('public')
+                    ->toggleable(), // Latihan Praktikum: Aktifkan toggle
+                
+                // Latihan Praktikum: Tambahkan kolom Tags (Array/Teks) dan sembunyikan secara default
+                TextColumn::make('tags')
+                    ->label('Tags')
+                    ->toggleable(isToggledHiddenByDefault: true),
+
+                // Latihan Praktikum: Tambahkan IconColumn untuk Published
                 IconColumn::make('published')
-                    ->boolean(),
+                    ->boolean()
+                    ->toggleable(),
+
                 TextColumn::make('created_at')
                     ->label('Created At')
                     ->dateTime()
-                    ->sortable(),
+                    ->sortable()
+                    ->toggleable(), //Aktifkan toggle
             ])
             ->defaultSort('created_at', 'desc')
             ->filters([
