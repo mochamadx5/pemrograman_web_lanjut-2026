@@ -1,5 +1,5 @@
 ## 1. Pertemuan 11: Implementasi Search & Filter pada Table Filament
-Pada pertemuan ini, tabel Post diberikan fitur pencarian teks dan penyaringan data untuk memudahkan pengguna saat mengelola data yang banyak[cite: 6].
+Pada pertemuan ini, tabel Post diberikan fitur pencarian teks dan penyaringan data untuk memudahkan pengguna saat mengelola data yang banyak.
 
 ### Dokumentasi Implementasi search dan filter
 
