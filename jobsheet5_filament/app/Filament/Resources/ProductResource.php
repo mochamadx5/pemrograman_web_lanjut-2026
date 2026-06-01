@@ -27,6 +27,7 @@ use Filament\Infolists\Components\Section as InfolistSection;
 use Filament\Infolists\Components\TextEntry;
 use Filament\Infolists\Components\ImageEntry;
 use Filament\Infolists\Components\IconEntry;
+use Filament\Infolists\Components\Tabs;
 
 class ProductResource extends Resource
 {
@@ -112,57 +113,67 @@ class ProductResource extends Resource
     {
         return $infolist
             ->schema([
-                // Section 1: Product Info
-                InfolistSection::make('Product Info')
-                    ->schema([
-                        TextEntry::make('name')
-                            ->label('Product Name')
-                            ->weight('bold')
-                            ->color('primary'),
-                        TextEntry::make('id')
-                            ->label('Product ID'),
-                        TextEntry::make('sku')
-                            ->label('Product SKU')
-                            ->badge()
-                            ->color('success'), // Tugas Praktikum: Badge warna beda
-                        TextEntry::make('description')
-                            ->label('Product Description')
-                            ->columnSpanFull(),
-                        TextEntry::make('created_at')
-                            ->label('Product Creation Date')
-                            ->date('d M Y')
-                            ->color('info'),
-                    ])->columns(2),
+                Tabs::make('Product Tabs')
+                    // ->vertical() // <-- HAPUS TANDA '//' DI AWAL BARIS INI UNTUK MENGUBAH JADI VERTICAL
+                    ->tabs([
+                        // Tab 1: Product Info
+                        Tabs\Tab::make('Product Info')
+                            ->icon('heroicon-o-information-circle') // Tugas Praktikum: Icon spesifik
+                            ->schema([
+                                TextEntry::make('name')
+                                    ->label('Product Name')
+                                    ->weight('bold')
+                                    ->color('primary'),
+                                TextEntry::make('id')
+                                    ->label('Product ID'),
+                                TextEntry::make('sku')
+                                    ->label('Product SKU')
+                                    ->badge()
+                                    ->color('success'),
+                                TextEntry::make('description')
+                                    ->label('Product Description')
+                                    ->columnSpanFull(),
+                                TextEntry::make('created_at')
+                                    ->label('Product Creation Date')
+                                    ->date('d M Y')
+                                    ->color('info'),
+                            ])->columns(2),
 
-                // Section 2: Pricing & Stock
-                InfolistSection::make('Product Price and Stock')
-                    ->schema([
-                        TextEntry::make('price')
-                            ->label('Product Price')
-                            ->weight('bold')
-                            ->color('primary')
-                            ->icon('heroicon-o-currency-dollar')
-                            ->formatStateUsing(fn ($state) => 'Rp ' . number_format($state, 0, ',', '.')), // Tugas Praktikum: Format Rp
-                        TextEntry::make('stock')
-                            ->label('Product Stock')
-                            ->weight('bold')
-                            ->color('primary')
-                            ->icon('heroicon-o-archive-box'), // Tugas Praktikum: Tambah icon pada stock
-                    ])->columns(2),
+                        // Tab 2: Pricing & Stock
+                        Tabs\Tab::make('Pricing & Stock')
+                            ->icon('heroicon-o-currency-dollar') // Tugas Praktikum: Icon spesifik
+                            ->badge(fn ($record) => $record->stock) // Tugas Praktikum: Badge dinamis berdasarkan stok
+                            ->badgeColor(fn ($record) => $record->stock < 10 ? 'danger' : 'success') // Tugas Praktikum: Warna badge berbeda
+                            ->schema([
+                                TextEntry::make('price')
+                                    ->label('Product Price')
+                                    ->weight('bold')
+                                    ->color('primary')
+                                    ->icon('heroicon-o-currency-dollar')
+                                    ->formatStateUsing(fn ($state) => 'Rp ' . number_format($state, 0, ',', '.')),
+                                TextEntry::make('stock')
+                                    ->label('Product Stock')
+                                    ->weight('bold')
+                                    ->color('primary')
+                                    ->icon('heroicon-o-archive-box'),
+                            ])->columns(2),
 
-                // Section 3: Image and Status
-                InfolistSection::make('Image and Status')
-                    ->schema([
-                        ImageEntry::make('image')
-                            ->label('Product Image')
-                            ->disk('public'),
-                        IconEntry::make('is_active')
-                            ->label('Is Active?')
-                            ->boolean(),
-                        IconEntry::make('is_featured')
-                            ->label('Is Featured?')
-                            ->boolean(),
-                    ])->columns(3),
+                        // Tab 3: Media & Status
+                        Tabs\Tab::make('Image and Status')
+                            ->icon('heroicon-o-photo') // Tugas Praktikum: Icon spesifik
+                            ->schema([
+                                ImageEntry::make('image')
+                                    ->label('Product Image')
+                                    ->disk('public'),
+                                IconEntry::make('is_active')
+                                    ->label('Is Active?')
+                                    ->boolean(),
+                                IconEntry::make('is_featured')
+                                    ->label('Is Featured?')
+                                    ->boolean(),
+                            ])->columns(3),
+                    ])
+                    ->columnSpanFull(),
             ]);
     }
 
