@@ -121,7 +121,7 @@ class PostResource extends Resource
                 // Latihan Praktikum: Buat filter tanggal
                 Filter::make('created_at')
                     ->label('Creation Date')
-                    ->schema([
+                    ->form([
                         DatePicker::make('created_at')
                             ->label('Select Date:'),
                     ])
