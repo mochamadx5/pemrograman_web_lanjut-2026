@@ -94,21 +94,30 @@ class PostResource extends Resource
         return $table
             ->columns([
                 TextColumn::make('title')
-                    ->searchable(),
+                    ->searchable()
+                    ->sortable(), // Tugas Praktikum: Aktifkan sortable
                 TextColumn::make('slug')
-                    ->searchable(),
-                TextColumn::make('category.name') // Mengambil nama kategori dari relasi
-                    ->searchable(),
+                    ->searchable()
+                    ->sortable(), // Tugas Praktikum: Aktifkan sortable
+                TextColumn::make('category.name') 
+                    ->searchable()
+                    ->sortable(), // Tugas Praktikum: Aktifkan sortable pada relasi
                 ColorColumn::make('color'),
                 ImageColumn::make('image')
                     ->disk('public'),
-                IconColumn::make('published') // Tugas Praktikum 4: Menampilkan ikon boolean
+                IconColumn::make('published') 
                     ->boolean(),
+                TextColumn::make('created_at') // Tambahan kolom untuk fitur sorting tanggal
+                    ->label('Created At')
+                    ->dateTime()
+                    ->sortable(),
             ])
+            ->defaultSort('created_at', 'desc') // Tugas Praktikum: Default sorting descending berdasarkan tanggal
             ->filters([
                 //
             ])
             ->actions([
+                Tables\Actions\ViewAction::make(), 
                 Tables\Actions\EditAction::make(),
             ])
             ->bulkActions([
