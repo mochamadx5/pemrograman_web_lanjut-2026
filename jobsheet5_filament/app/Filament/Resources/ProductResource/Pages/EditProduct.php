@@ -13,8 +13,13 @@ class EditProduct extends EditRecord
     protected function getHeaderActions(): array
     {
         return [
-            Actions\ViewAction::make(),
             Actions\DeleteAction::make(),
         ];
+    }
+
+    // Ini kode untuk menghilangkan tombol default
+    protected function getFormActions(): array
+    {
+        return []; 
     }
 }

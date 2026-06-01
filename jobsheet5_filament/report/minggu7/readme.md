@@ -16,4 +16,6 @@ Pada tahap ini, *form* input produk diubah menjadi berjenjang agar lebih rapi da
 - **Kustomisasi Tombol Submit:** Menonaktifkan tombol simpan *default* bawaan halaman dan memindahkannya secara kustom ke langkah terakhir di dalam Wizard.
 
 ### Dokumentasi Tampilan Wizard Form Product
+- Tampilan Database dan Post
 ![database](img/11.png)
+![database](img/12png)
