@@ -55,10 +55,9 @@ class CategoryResource extends Resource
             ]);
     }
     
-    public static function getRelations(): array
-    {
+    public static function getRelations(): array {
         return [
-            //
+            RelationManagers\PostsRelationManager::class, // Tambahkan baris ini
         ];
     }
 
