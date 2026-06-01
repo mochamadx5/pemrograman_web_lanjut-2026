@@ -4,7 +4,7 @@ Pada pertemuan ini, tabel Post diberikan fitur pencarian teks dan penyaringan da
 ### Dokumentasi Implementasi search dan filter
 
 - Implementasi searching
-Fitur pencarian ditambahkan menggunakan method `searchable()` pada kolom teks (seperti Title, Slug, dan Category)[cite: 6]. Hasil pencarian akan memfilter data di tabel secara otomatis dan *real-time* saat pengguna mengetikkan kata kunci[cite: 6].
+Fitur pencarian ditambahkan menggunakan method `searchable()` pada kolom teks (seperti Title, Slug, dan Category)[cite: 6]. Hasil pencarian akan memfilter data di tabel secara otomatis dan *real-time* saat pengguna mengetikkan kata kunci.
 ![search](img/20.png)
 
 - Implementasi filter
