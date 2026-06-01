@@ -172,6 +172,26 @@ class PostResource extends Resource
             ->actions([
                 Tables\Actions\ViewAction::make(),
                 Tables\Actions\EditAction::make(),
+                
+                // Latihan Praktikum: Tambahkan DeleteAction
+                DeleteAction::make(), 
+                
+                // Latihan Praktikum: Tambahkan ReplicateAction (beserta icon)
+                ReplicateAction::make()
+                    ->icon('heroicon-o-document-duplicate'),
+
+                // Latihan Praktikum: Buat Custom Action Status (dengan icon dan confirmation)
+                Action::make('status')
+                    ->label('Status Change')
+                    ->icon('heroicon-o-check-circle')
+                    ->requiresConfirmation() // Latihan Praktikum: Menambahkan konfirmasi
+                    ->schema([
+                        Checkbox::make('published')
+                            ->default(fn ($record): bool => (bool) $record->published),
+                    ])
+                    ->action(function ($record, array $data) {
+                        $record->update(['published' => $data['published']]);
+                    }),
             ])
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([
