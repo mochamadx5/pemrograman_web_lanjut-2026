@@ -20,7 +20,18 @@ Pada tahap ini, *form* input produk diubah menjadi berjenjang agar lebih rapi da
 ![database](img/11.png)
 
 - Tampilan Post
-![database](img/12.png)
+![post](img/12.png)
 
-- Tampilan Product
-![database](img/13.png)
+- Menambahkan Product
+![product](img/15.png)
+
+## 2. Pertemuan 8: Implementasi Info List (View Page)
+Tahap ini mengubah tampilan halaman **View** produk yang sebelumnya berbentuk *form* input menjadi tampilan informasi detail.
+- **Menggunakan Komponen Info List:** Menerapkan `TextEntry`, `ImageEntry`, dan `IconEntry` (untuk tipe *boolean* seperti status aktif dan unggulan).
+- **Membagi Tampilan dengan Section:** Mengelompokkan detail informasi produk ke dalam kotak-kotak (*Section*).
+- **Kustomisasi Tampilan:** Menambahkan modifikasi visual seperti `badge()`, `color()`, ikon, serta pemformatan tanggal yang lebih mudah dibaca.
+
+### Dokumentasi Tampilan Info List Product
+- Menampilkan List Product
+![Product Info](img/13.png)
+![Product Info](img/14.png)
