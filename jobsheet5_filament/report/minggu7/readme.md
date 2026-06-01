@@ -45,3 +45,4 @@ Tahap ini mengubah tampilan halaman **View** produk yang sebelumnya berbentuk *f
 ### Dokumentasi Tampilan Tabs
 - Penerapan badge dinamis menjadi Tabs horizontal 
 ![Tabs Horizontal](img/16.png)
+
